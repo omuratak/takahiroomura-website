@@ -1,0 +1,19 @@
+.title-container img {
+  width: 30%;
+  padding-left: 100px;
+  padding-top: 50px;
+}
+
+
+
+.title {
+  font-family: lato, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  color: #333E6B;
+
+  float: right;
+  padding-right: 30%;
+  padding-top: 10px;
+}
