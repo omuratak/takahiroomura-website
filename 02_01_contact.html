@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <title>Takahiro Omura - Contact</title>
   <link rel="stylesheet" href="02_02_contact_style.css">
-  <script type="02_03_contact.js"></script>
+  <script type="gen_validatorv4.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <form>
+    <form name="contact-form" method="post" action="02_04_contact_handler.php">
       <h1>Please contact me with the form below!</h1>
       <ul class="flex-outer">
         <li>
@@ -30,6 +30,14 @@
         </li>
       </ul>
     </form>
-  </div></body>
+    <script type="text/javascript">
+    var frmvalidator  = new Validator("contact-form");
+    frmvalidator.addValidation("name","req","Please enter your full name");
+    frmvalidator.addValidation("email","req","Please enter your email");
+    frmvalidator.addValidation("email","email", "Please enter a valid email address");
+    frmvalidator.addValidation("message","req","Please enter your message");
+    </script>
+  </div>
+</body>
 
 </html>
