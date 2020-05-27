@@ -84,3 +84,8 @@ body {
 .flex-outer li button:hover {
   opacity: 0.8;
 }
+
+.thankyou {
+  padding-top: 20px;
+  text-align: center;
+}

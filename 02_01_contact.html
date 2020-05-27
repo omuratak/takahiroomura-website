@@ -11,24 +11,23 @@
 
 <body>
   <div class="container">
-    <form name="contact-form" id="contact-form" enctype="text/plain"
-      action="https://forms.gle/iMxSoinC1TWn7xgP7" target="hidden_iframe" onsubmit="submitted=true;">
+    <form name="gform-form" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1fyC4ecc9DHd7a3dRbmeOHRz15UaQbf3tR3s_ldM1Mz8/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
       <h1>Please contact me with the form below!</h1>
       <ul class="flex-outer">
         <li>
-          <label for="name">Full Name <a>*</a></label>
+          <label for="entry.820025870">Full Name <a>*</a></label>
           <input type="text" name="entry.820025870" id="entry.820025870" placeholder="Enter your first name here" required>
         </li>
         <li>
-          <label for="email">Email <a>*</a></label>
+          <label for="entry.1962042389">Email <a>*</a></label>
           <input type="email" name="entry.1962042389" id="entry.1962042389" placeholder="Enter your email here" required>
         </li>
         <li>
-          <label for="message">Message <a>*</a></label>
+          <label for="entry.1353044690">Message <a>*</a></label>
           <textarea rows="6" name="entry.1353044690" id="entry.1353044690" placeholder="Enter your message here" required></textarea>
         </li>
         <li>
-          <button type="submit">Submit</button>
+          <button type="submit" value="Submit">Submit</button>
         </li>
       </ul>
     </form>
@@ -37,12 +36,16 @@
     <script type="text/javascript">
       var submitted = false;
     </script>
-    <script type="text/javascript">
-      $('#contact-form"').on('submit', function(e) {
-        $('#contact-form" *').fadeOut(2000);
-        $('#contact-form"').prepend('Thank you for your email!');
+    <script type="text/javascript" class="response">
+      $('#gform').on('submit', function(e) {
+        $('#gform *').fadeOut(0);
+        var response = $(
+          '<div class="thankyou">Thank you for your email! <br/>I will get back to you as soon as possible.</div>'
+        )
+        $('#gform').prepend(response);
       });
     </script>
+
   </div>
 </body>
 
