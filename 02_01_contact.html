@@ -6,11 +6,13 @@
   <title>Takahiro Omura - Contact</title>
   <link rel="stylesheet" href="02_02_contact_style.css">
   <script type="gen_validatorv4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <form name="contact-form" method="post" action="02_03_contact_handler.php">
+    <form name="contact-form" method="post"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSf5hnHRTZlAjqOha3vQZXywghThDzvx1sWgYPeyoNqlUN1HKg/viewform?usp=pp_url&entry.820025870=Takahiro&entry.1962042389=takahiro.omura.to@gmail.com&entry.1353044690=Hello" target="hidden_iframe" onsubmit="submitted=true;">
       <h1>Please contact me with the form below!</h1>
       <ul class="flex-outer">
         <li>
@@ -30,12 +32,15 @@
         </li>
       </ul>
     </form>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     <script type="text/javascript">
-    var frmvalidator  = new Validator("contact-form");
-    frmvalidator.addValidation("name","req","Please enter your full name");
-    frmvalidator.addValidation("email","req","Please enter your email");
-    frmvalidator.addValidation("email","email", "Please enter a valid email address");
-    frmvalidator.addValidation("message","req","Please enter your message");
+      var submitted = false;
+    </script>
+    <script type="text/javascript">
+      $('#contact-form"').on('submit', function(e) {
+        $('#contact-form" *').fadeOut(2000);
+        $('#contact-form"').prepend('Thank you for your email!');
+      });
     </script>
   </div>
 </body>
