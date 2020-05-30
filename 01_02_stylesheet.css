@@ -1,26 +1,18 @@
-.title-container {
-  width: 90%
-}
-
-.title-container img {
-  width: 40%;
-  padding-top: 50px;
+.container img {
+  padding: 50px 5%;
   margin: 0 auto;
-  padding-left: 5%;
 }
 
 .intro-container {
   font-family: lato, sans-serif;
   font-style: normal;
-  float: right;
   text-align: center;
-  margin-right: 5%;
-  margin-left: 5%;
+  padding-top: 50px;
 }
 
 .intro-container h1 {
   font-weight: 500;
-  font-size: 70px;
+  font-size: 4rem;
   color: #333E6B;
   float: right;
   width: 100%;
@@ -29,7 +21,7 @@
 
 .intro-container p {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #333E6B;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -46,6 +38,7 @@
 
 .btn1:hover {
   opacity: 0.8;
+  color: white;
 }
 
 .btn1:link {

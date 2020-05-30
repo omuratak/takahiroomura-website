@@ -4,27 +4,88 @@
 <head>
   <meta charset="utf-8">
   <title>Takahiro Omura - Contact</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="02_02_contact_style.css">
+  <link rel="icon" href="website_favicon_202005.png">
   <script type="gen_validatorv4.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+
+<form class="container" name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1fyC4ecc9DHd7a3dRbmeOHRz15UaQbf3tR3s_ldM1Mz8/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
+  <h1>Please contact me with the form below!</h1>
+  <div class="row">
+    <div class="col-sm-4">
+      <label for="entry.820025870">Full Name <a>*</a></label>
+    </div>
+    <div class="col-sm-8">
+      <input type="text" name="entry.820025870" id="entry.820025870" placeholder="Enter your first name" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <label for="entry.1962042389">Email <a>*</a></label>
+    </div>
+    <div class="col-sm-8">
+      <input type="email" name="entry.1962042389" id="entry.1962042389" placeholder="Enter your email" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <label for="entry.1353044690">Message <a>*</a></label>
+    </div>
+    <div class="col-sm-8">
+      <textarea rows="6" name="entry.1353044690" id="entry.1353044690" placeholder="Enter your message" required></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-8">
+      <button type="submit" value="Submit">Submit</button>
+    </div>
+  </div>
+</form>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+  var submitted = false;
+</script>
+<script type="text/javascript" class="response">
+  $('#gform').on('submit', function(e) {
+    $('#gform *').fadeOut(0);
+    var response = $(
+      '<div class="thankyou">Thank you for your email! <br/>I will get back to you as soon as possible.</div>'
+    )
+    $('#gform').prepend(response);
+  });
+</script>
+
+
+<!---
   <div class="container">
     <form name="gform-form" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1fyC4ecc9DHd7a3dRbmeOHRz15UaQbf3tR3s_ldM1Mz8/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
       <h1>Please contact me with the form below!</h1>
       <ul class="flex-outer">
         <li>
-          <label for="entry.820025870">Full Name <a>*</a></label>
-          <input type="text" name="entry.820025870" id="entry.820025870" placeholder="Enter your first name here" required>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="entry.820025870">Full Name <a>*</a></label>
+            </div>
+            <div class="col-sm-6">
+              <input type="text" name="entry.820025870" id="entry.820025870" placeholder="Enter your first name" required>
+            </div>
+          </div>
         </li>
         <li>
           <label for="entry.1962042389">Email <a>*</a></label>
-          <input type="email" name="entry.1962042389" id="entry.1962042389" placeholder="Enter your email here" required>
+          <input type="email" name="entry.1962042389" id="entry.1962042389" placeholder="Enter your email" required>
         </li>
         <li>
           <label for="entry.1353044690">Message <a>*</a></label>
-          <textarea rows="6" name="entry.1353044690" id="entry.1353044690" placeholder="Enter your message here" required></textarea>
+          <textarea rows="6" name="entry.1353044690" id="entry.1353044690" placeholder="Enter your message" required></textarea>
         </li>
         <li>
           <button type="submit" value="Submit">Submit</button>
@@ -47,6 +108,8 @@
     </script>
 
   </div>
+--->
+
 </body>
 
 </html>
